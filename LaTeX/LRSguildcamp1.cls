@@ -24,7 +24,7 @@
 %%
 %% When you change this, make sure the name of this file and the name
 %% of the game's environment variable both match it.  See ../README.
-\def\gameclassname{guildcamp4}
+\def\gameclassname{LRSguildcamp1}
 
 
 %%%%%
@@ -38,8 +38,8 @@
 %%
 %% Basic custom game information; gets used everywhere.  Don't put
 %% linebreaks in these and keep their lengths reasonable.
-\def\gamename{A Reunion at Katmeers}
-\def\gamedate{May 23rd, 2015}
+\def\gamename{InsertNameHere}
+\def\gamedate{Aug 17, 2017}
 
 
 %%%%%
@@ -50,7 +50,7 @@
 %% writing, \Final specifies that any \TODO commands remaining in the
 %% text of the game will not typeset any todo info (they will still
 %% output info to the terminal).
-\def\gamedraft{\Final}
+\def\gamedraft{\Draft}
 
 
 %%%%%
@@ -81,7 +81,7 @@
 %% Define \signdate as either \gamedate or \gamedateabbrev.  If you
 %% plan to leave signs up between different runs, \gamedate may be
 %% better.
-\def\takedownby{NA}
+\def\takedownby{Aug 18, 2017}
 \def\signdate{\gamedateabbrev}
 
 
