@@ -1,1 +1,2 @@
-\edef\gamepath{"C:/Users/charf/OneDrive/Documents/GitHub/LRS_GC_2017"}
+\edef\gamepath{/Users/bettybong01/Documents/GitHub}
+
