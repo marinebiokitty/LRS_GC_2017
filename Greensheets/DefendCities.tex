@@ -1,0 +1,29 @@
+\documentclass[green]{LRSguildcamp1}
+\begin{document}
+\name{\gDefendCities{}}
+Currently, all players are away from home except for \cGrandma{\intro}, but all players are aware that their cities are at risk while they are gone.  
+You have all planned to be away from your cities for at most three hours, after which you must return home.
+% must update if game length changes
+
+To protect your cities and your control over them, you have all hired city-sitters, such as extra private security, minions, or teenage superhumans looking for resume material.  But occasional incidents may come up while you're gone.  In these cases, you will get a call (a GM will get your attention) from your city-sitter.
+
+When you get a call, roll a d6 and add your Influence stat.  This is your defense score.  %TODO: figure out how to macro the name of that stat.
+You may also choose to send additional financial resources to your city's defenders.  You may add one to your defense score for every \$10,000 you send to your city.  This money cannot be recovered and is out of game.
+
+Any attackers of your city, whether they just happened to come by or were dispatched by another PC, will make a similar calculation, called the offense score.  You do not get to know this score.
+
+You may also attempt to persuade other players living in the same city to lend you their aid.  You may choose to take sixty seconds to bring at most one other player to the phone, where they must announce, "I assist in the defense of City Name," which will normally increase your defense score by 1.  However, if that player is actually the source of the attack, you have revealed your defense plans to the attackers, and the offense score will rise by 2.
+
+Five minutes later, a GM will inform you of the outcome:
+
+\begin{tabular}{l|l}
+defense score $<$ offense score & \begin{tabular}{l}
+				  The defenders fail.  \\
+                                  On the first successful attack (from that attacker), the attacker gains \$10,000.\\
+				  On the second successful attack (from that attacker), the attacker gains control of the city.
+				  \end{tabular} \\ \hline
+defense score $=$ offense score & The defenders prevail, but there is no trace of the attackers. \\ \hline
+defense score $=$ offense score + 1 & The defenders prevail, and gain a hint of the attackers. \\ \hline
+defense score $\ge$ offense score + 2 & The defenders prevail, and gain a clear picture of their attackers.
+\end{tabular}
+\end{document}

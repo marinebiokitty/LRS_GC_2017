@@ -1,0 +1,30 @@
+\documentclass[green]{LRSguildcamp1}
+\begin{document}
+\name{\gAttackCities{}}
+Currently, all players are away from home except for \cGrandma{\intro}, but you have plans to maneuver allies or minions to take advantage of another player's absence.  
+They have undoubtedly hired help to guard their city in their absence -- extra police, D-list superhumans, or minions, but these defenders can be outmaneuvered if you play your hand correctly.
+% must update if game length changes
+
+Your character sheet will tell you times in game when your allies' plans will be ready.  As soon as possible after these times, you must hold your hand up to your ear as if it is a phone for fifteen seconds, during which it is apparent to anyone who can see you that you are placing a call.  After fifteen seconds, get a GM if one has not already found you.
+
+The GM will have you roll a d6 and add your Influence stat.  This is your offense score.  %TODO: figure out how to macro the name of that stat.
+You may also choose to send additional financial resources to your allies.  You may add one to your offense score for every \$10,000 you send them.  This money cannot be recovered and is out of game.
+
+Every five minutes (rounded down) between the time your allies get into position and the time you place the call will reduce your offense score by one.
+
+A few minutes after your call is placed, the city's defenders will make a call to the character in current control of that city.  They will make similar calculations to compute a defense score.  They may also seek allies.  If you can persuade them that you will help defend their city, when you are actually the one attacking it, your offense score will rise by 2, since they have just revealed their defense plans to you.
+
+Five minutes later, a GM will inform you of the outcome:
+
+\begin{tabular}{l|l}
+defense score $<$ offense score & \begin{tabular}{l}
+				  The defenders fail.  \\
+                                  On the first successful attack (from that attacker), the attacker gains \$10,000.\\
+				  On the second successful attack (from that attacker), the attacker gains control of the city.
+				  \end{tabular} \\ \hline
+defense score $\ge$ offense score & \begin{tabular}{l}
+					The defenders prevail, but there is no trace of the attackers. \\
+					Depending on the margin of victory, the defenders may learn something about the \\
+					attacker, but you won't know that result. \end{tabular}
+\end{tabular}
+\end{document}
