@@ -38,7 +38,7 @@
 %%
 %% Basic custom game information; gets used everywhere.  Don't put
 %% linebreaks in these and keep their lengths reasonable.
-\def\gamename{InsertNameHere}
+\def\gamename{With Family Like This...}
 \def\gamedate{Sep 17, 2017}
 
 
