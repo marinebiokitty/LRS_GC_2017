@@ -1,19 +1,24 @@
 \documentclass[blue]{LRSguildcamp1}
+\usepackage{tabularx}late
 \begin{document}
 \name{\bSuperFamily{}}
-\begin{tabular}{l|l|p{0.1\linewidth}|p{0.4\linewidth}|p{0.15\linewidth}}
-{\bf Name} & {\bf Pronoun} & {\bf Super name} & {\bf Reputation} & {\bf Power} \\ \hline
-\cGrandma{\intro} & \cGrandma{\they} & \cGrandma{\MYsupername} & A legendary supervillain, thief and occasional celebrity abductor.   Legendarily independent; not a member of the Villain Compact. & \cGrandma{\MYsuperpower} \\ \hline
-\cGS{\intro} & \cGS{\they} & \cGS{\MYsupername} & Famed supervillain and \cGS{\spouse} of \cGrandma{}.  Died of natural causes.  & \cGS{\MYsuperpower} \\ \hline
-\cOldest{\intro} & \cOldest{\they} & \cOldest{\MYsupername} & Supervillain of \pCityO{}. Attractive, audacious, and ruthless.  Major figure in the Villain Compact. Oldest child of \cGrandma{\intro}. In a torrid affair with \cOS{}. & \cOldest{\MYsuperpower} \\ \hline
-\cOS{\intro} & \cOS{\they} & \cOS{\MYsupername} &  Superhero of \pCityO{}.  Attractive, practical, and determined.  Minor figure in the League of Heroes.  In a torrid affair with \cOldest{}. & \cOS{\MYsuperpower} \\ \hline
-\cArchitect{\intro} & \cArchitect{\they} & \cArchitect{\MYsupername} & Famous architect based in \pCityArchitect{}; does not use their superpowers.  Middle child of \cGrandma{\intro}.  Was married to \cAS{\intro}, now deceased. & \cArchitect{\MYsuperpower} \\ \hline
-\cAS{\intro} & \cAS{\they} & \cAS{\MYsupername} & Spouse of \cArchitect{}.  Deceased.  & \cAS{\MYsuperpower} \\ \hline
-\cYoungest{\intro} & \cYoungest{\they} & \cYoungest{\MYsupername} & Upstanding superhero of \pCityYoungest{}; a rising star in the League of Heroes.  Youngest child of \cGrandma{}. & \cYoungest{\MYsuperpower} \\ \hline
+
+\TODO{Make image of family tree as soon as we name characters}
+
+\begin{tabularx}{\textwidth}{l|l|l|X|X|X}
+{\bf Name} & {\bf Pronoun} & {\bf Super name} & {\bf Reputation} & {\bf Allegiance} & {\bf Power} \\ \hline
+\cGrandma{\intro} & \cGrandma{\they} & \cGrandma{\MYsupername} & A legendary supervillain, thief and occasional celebrity abductor. & Independent \cGrandma{\villain} & 
+\cGrandma{\MYsuperpower} \\ \hline
+\cGS{\intro} & \cGS{\they} & \cGS{\MYsupername} & Famed supervillain and \cGS{\spouse} of \cGrandma{}.  & Deceased \cGS{\villain} & \cGS{\MYsuperpower} \\ \hline
+\cOldest{\intro} & \cOldest{\they} & \cOldest{\MYsupername} & Supervillain of \pCityO{}. Attractive, audacious, and ruthless.  Oldest child of \cGrandma{\intro}. In a torrid affair with \cOS{}. & \pVillainCompact{} & \cOldest{\MYsuperpower} \\ \hline
+\cOS{\intro} & \cOS{\they} & \cOS{\MYsupername} &  Superhero of \pCityO{}.  Attractive, practical, and determined.  In a torrid affair with \cOldest{}. & \pLeagueOfHeroes{} & \cOS{\MYsuperpower} \\ \hline
+\cArchitect{\intro} & \cArchitect{\they} & \cArchitect{\MYsupername} & Famous architect based in \pCityArchitect{}; does not use their superpowers.  Middle child of \cGrandma{\intro}. & Unaligned & \cArchitect{\MYsuperpower} \\ \hline
+\cAS{\intro} & \cAS{\they} & \cAS{\MYsupername} & Spouse of \cArchitect{}.  & Deceased \cAS{\hero} & \cAS{\MYsuperpower} \\ \hline
+\cYoungest{\intro} & \cYoungest{\they} & \cYoungest{\MYsupername} & Upstanding superhero of \pCityYoungest{}.  Youngest child of \cGrandma{}. & \pLeagueOfHeroes{} & \cYoungest{\MYsuperpower} \\ \hline
 % \cYS{\intro} & \cYS{\they} & & Relatively unknown superhero with an ambiguous past.  \cYS{\SO} of \cYoungest{\intro}. & Amplifies other superhumans' powers \\ \hline
-\cGrad{\intro} & \cGrad{\they} & \cGrad{\MYsupername} & Only child of \cOldest{} and \cOS{}.  Just graduated super college.  & \cGrad{\MYsuperpower} \\ \hline
-\cTeen{\intro} & \cTeen{\they} & \cTeen{\MYsupername} & Older child of \cArchitect{}.  Reportedly something of a hellion. & \cTeen{\MYsuperpower} \\ \hline
-\cTween{\intro} & \cTween{\they} & \cTween{\MYsupername} & Younger child of \cArchitect{}. Runs a conspiracy theory blog.  Choosing a high school to go to. & \cTween{\MYsuperpower} \\ \hline
-\end{tabular}
+\cGrad{\intro} & \cGrad{\they} & \cGrad{\MYsupername} & Only child of \cOldest{} and \cOS{}.  Just graduated super college. & Undecided & \cGrad{\MYsuperpower} \\ \hline
+\cTeen{\intro} & \cTeen{\they} & \cTeen{\MYsupername} & Older child of \cArchitect{}.  Reportedly something of a hellion. & Undecided & \cTeen{\MYsuperpower} \\ \hline
+\cTween{\intro} & \cTween{\they} & \cTween{\MYsupername} & Younger child of \cArchitect{}. Runs a conspiracy theory blog.  Choosing a high school to go to. & Undecided & \cTween{\MYsuperpower} \\ \hline
+\end{tabularx}
 
 \end{document}
