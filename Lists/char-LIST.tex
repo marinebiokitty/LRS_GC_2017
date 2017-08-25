@@ -69,7 +69,7 @@
   \FD\MYdesc	{} %% badge description
 
   \FD\MYcr	{Combat Rating}{CR}{} %% for DarkWater-style combat
-  \newstat\MYinfluence {Influence}{IN}{2}
+  \newstat\MYinfluence {Influence}{IN}{0}
   \newstat\MYsupername {Super Name}{}{}
   \newstat\MYsuperpower {Superpower}{}{}
   %\newstat\MYhp	{Hitpoints}{HP}{10} % Hitpoints
@@ -211,6 +211,7 @@
   \s\MYdesc	{}
   \s\MYsex	{\female}
   \s\MYplayer	{}
+  \s\MYinfluence{4}
   \s\MYsupername{Voil\'a}
   \s\MYsuperpower{Walking through walls}
   \s\MYblues	{\bWorld{}\bVillainCompact{}\bSuperFamily{}\bChicagoIncident{}}
@@ -219,7 +220,7 @@
   \s\MYitems	{\iEngagementRings{}}
   \s\MYwhites	{}
   \s\MYcash	{}
-  
+  \s\MYmems	{\mTakeCity{}}
   \s\MYcr{}
 }
 
@@ -289,14 +290,14 @@
 	\s\MYsuperpower{Ice control}
   \s\MYsex	{\ambiguous}
   \s\MYplayer	{}
-  
+  \s\MYinfluence{2}
   \s\MYblues	{\bWorld{}\bVillainCompact{}\bSuperFamily{}\bChicagoIncident{}}
   \s\MYgreens	{\gDefendCities{}}
   \s\MYabils	{\aFreezePerson{}\aFreezeObject{}\aMonologue{}\aIrresistible{}}
   \s\MYitems	{}
   \s\MYwhites	{\wVillainRecruitment{}}
   \s\MYcash	{}
-  
+  \s\MYmems	{\mLoseCity{}}
   \s\MYcr{}
 }
 
@@ -309,14 +310,14 @@
   \s\MYdesc	{}
   \s\MYsex	{\ambiguous}
   \s\MYplayer	{}
-  
+  \s\MYinfluence{2}
   \s\MYblues	{\bWorld{}\bHeroLeague{}\bSuperFamily{}\bChicagoIncident{}}
   \s\MYgreens	{\gAttackCities{}}
   \s\MYabils	{\aMoralStand{}\aZapPerson{}\aZapObject{}\aIrresistible{}}
   \s\MYitems	{\iBagofHolding{}}
   \s\MYwhites	{\wHeroRecruitment{}}
   \s\MYcash	{}
-  \s\MYmems	{\mOSLeaveLeague{}\mOSTalkYS{}}
+  \s\MYmems	{\mOSLeaveLeague{}\mOSTalkYS{}\mTakeCity{}\mLoseCity{}}
   \s\MYcr{}
 }
 
@@ -329,14 +330,14 @@
   \s\MYdesc	{}
   \s\MYsex	{\ambiguous}
   \s\MYplayer	{}
-  
+  \s\MYinfluence{3}
   \s\MYblues	{\bWorld{}\bHeroLeague{}\bSuperFamily{}\bChicagoIncident{}}
   \s\MYgreens	{\gDefendCities{}}
   \s\MYabils	{\aMoralStand{}\aSpeed{}}
   \s\MYitems	{}
   \s\MYwhites	{\wHeroRecruitment{}}
   \s\MYcash	{}
-  
+  \s\MYmems	{\mLoseCity{}}
   \s\MYcr{}
 }
 
@@ -348,7 +349,7 @@
   \s\MYdesc	{}
   \s\MYsex	{\ambiguous}
   \s\MYplayer	{}
-  
+  \s\MYinfluence{1}
   \s\MYblues	{\bWorld{}\bSuperFamily{}\bChicagoIncident{}}
   \s\MYgreens	{}
   \s\MYabils	{\aAmplification{}}

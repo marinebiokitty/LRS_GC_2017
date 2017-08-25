@@ -93,6 +93,19 @@
   	\s\MYname	{Open if you talk with a character with badge number 116 about their super powers. } % \cYS{} \cYS{\their}
   	\s\MYtext	{After talking with this person about \cYS{\their} super powers before you realize that you remember another superhuman having those powers.  It might be a good idea to research them on \pTweenwebsite{}. } 
 		}
-	
+\NEW{MemEnvelope}{\mTakeCity}{ % TODO: check with Acata that I did this right
+	\s\MYname{Open if you take control of a city you attack.}
+	\s\MYtext{You've gained at least temporary control of the city, but others may try to take it back.}
+	\s\MYgreens{\gDefendCities{}}
+}
+
+\NEW{MemEnvelope}{\mLoseCity}{
+	\s\MYname{Open if you lose control of a city.}
+	\s\MYtext{Your allies  hastily organize to attempt to retake \pCityO{}.  You may follow the instructions to attack cities from the attached greensheet.  Your allies will be in place 20 minutes from now.  This will be your only chance, but if you succeed you will retake the city (as if it were your second successful attack).}
+	\s\MYgreens{\gAttackCities{}}
+}
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
