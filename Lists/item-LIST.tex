@@ -28,8 +28,10 @@
 %% \prop inside an Item macro labels the card as a prop.  \unstash
 %% labels the card as unstashable.  \bulky{n} labels the card as
 %% n-hands bulky.  \contain{n} labels the card with n-hands capacity.
-\def\prop{%
-  \append\MYmark{ ~PROP~ }}
+%\def\prop{%
+ % \append\MYmark{ ~PROP~ }}
+  \def\tinker{%
+  \append\MYmark{ ~TINKERABLE~ }}
 \def\unstash{%
   \append\MYmark{ ~UNSTASHABLE~ }}
 \def\bulky#1{%
@@ -38,7 +40,9 @@
 \def\contain#1{%
   \s\MYcapacity{#1}%
   \append\MYmark{\mbox{ ~\MYcapacity-Hand~Capacity~ }}}
-
+\def\contain#1{%
+  \s\MYcapacity{#1}%
+  \append\MYmark{\mbox{ ~\MYvalue-VALUE~ }}}
 
 %%%%%
 %% ItemPacket macros are for item cards with an attached packet.
