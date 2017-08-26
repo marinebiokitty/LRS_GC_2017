@@ -14,6 +14,7 @@
   \FD\MYtext	{} %% longer text of item
   \FD\MYmark	{} %% possible contents of shaded ``mark'' on card
   \FD\MYbulky	{0} %% potential bulkiness
+  \FD\MYvalue	{Not Sellable}
   \FD\MYcapacity{N/A} %% potential capacity
   \sd\MYlistmap	{\item\MYname\ifx\MYnumber\empty\else\ (\MYnumber)\fi}
   }
@@ -40,9 +41,9 @@
 \def\contain#1{%
   \s\MYcapacity{#1}%
   \append\MYmark{\mbox{ ~\MYcapacity-Hand~Capacity~ }}}
-\def\contain#1{%
-  \s\MYcapacity{#1}%
-  \append\MYmark{\mbox{ ~\MYvalue-VALUE~ }}}
+\def\value#1{%
+  \s\MYvalue{#1}%
+  \append\MYmark{\mbox{ ~Cash value: \MYvalue~ }}}
 
 %%%%%
 %% ItemPacket macros are for item cards with an attached packet.
@@ -144,78 +145,88 @@
   \s\MYcontents	{It tastes yummy.}
   }
 
-\NEW{ItemLabel}{\iTestLabel}{
+\NEW{Item}{\iTestLabel}{
   \s\MYname	{Test Gun Label}
   \s\MYnumber	{0000}
   \s\MYtext	{Disc gun, loadable to 20 shots.}
   }
   
   
-\NEW{ItemLabel}{\iEngagementRings}{
+\NEW{Item}{\iEngagementRings}{
   \s\MYname	{EngagementRings}
   \s\MYnumber	{0000}
   \s\MYtext	{A pair of shiny platinum rings set with large purple stones.}
   \s\MYcontents	{You can now communicate with the wearer of the other ring from miles away.}
+    \value	{20000}
   }
   
-\NEW{ItemLabel}{\iBagofHolding}{
+\NEW{Item}{\iBagofHolding}{
   \s\MYname	{BagofHolding}
   \s\MYnumber	{0000}
   \s\MYtext	{An innocuous slouchy bag.}
    \s\MYcontents	{You can now hide anything in this bag.}
+     \value	{10000}
   }
   
   
-\NEW{ItemLabel}{\iFancyUtilityBelt}{
+\NEW{Item}{\iFancyUtilityBelt}{
   \s\MYname	{FancyUtilityBelt}
   \s\MYnumber	{0000}
   \s\MYtext	{Climbing and grappling gear that retracts to a shiny belt.}
     \s\MYcontents	{You can now swing over any obstacles in your path.}
+    \value	{10000}
   }
   
-\NEW{ItemLabel}{\iBulletproofCape}{
+\NEW{Item}{\iBulletproofCape}{
   \s\MYname	{BulletproofCape}
   \s\MYnumber	{0000}
   \s\MYtext	{Top of the line bulletproof cape sample.}
     \s\MYcontents	{Bullets cannot harm you.}
+      \value	{10000}
   }
   
-  \NEW{ItemLabel}{\iArtworkOne}{
+  \NEW{Item}{\iArtworkOne}{
   \s\MYname	{Magic Trick}
   \s\MYnumber	{0000}
-  \s\MYtext	{Kinetic sculpture composed of spinning steel rounds, Worth 10K.}
+  \s\MYtext	{Kinetic sculpture composed of spinning steel rounds.}
+    \value	{10000}
   }
   
-  \NEW{ItemLabel}{\iArtworkTwo}{
+  \NEW{Item}{\iArtworkTwo}{
   \s\MYname	{To Incite}
   \s\MYnumber	{0000}
-  \s\MYtext	{Masterful oil painting in bold strokes. Heavily inspired by the classical but look's to be fairly new. Worth 30K. }
+  \s\MYtext	{Masterful oil painting in bold strokes. Heavily inspired by the classical but look's to be fairly new. }
     \s\MYcontents	{I was painted by someone special.}
+      \value	{30000}
   }
   
-  \NEW{ItemLabel}{\iArtworkThree}{
+  \NEW{Item}{\iArtworkThree}{
   \s\MYname	{Map Key}
   \s\MYnumber	{0000}
-  \s\MYtext	{A mesmerizing installation made of 1962 colored keys. Worth 20K.}
+  \s\MYtext	{A mesmerizing installation made of 1962 colored keys.}
     \s\MYcontents	{In order to complete this course you must steal \iBagofHolding{} and bring it to me. The first person who does this will receive the prize.}
+      \value	{20000}
   }
   
-  \NEW{ItemLabel}{\iTinkerObjectOne}{
+  \NEW{Item}{\iTinkerObjectOne}{
   \s\MYname	{VintageRecordPlayer}
   \s\MYnumber	{0000}
-  \s\MYtext	{Fancy record player with large brass horn and legs, mother of pearl dials. Looks like it hasn't been used in a while. Worth \$5,000.}
+  \s\MYtext	{Fancy record player with large brass horn and legs, mother of pearl dials. Looks like it hasn't been used in a while.}
+    \value	{5000}
   }
   
-  \NEW{ItemLabel}{\iTinkerObjectTwo}{
+  \NEW{Item}{\iTinkerObjectTwo}{
   \s\MYname	{LavaLamp}
   \s\MYnumber	{0000}
-  \s\MYtext	{Red and purple lava lamp. Work \$5,000}
+  \s\MYtext	{Red and purple lava lamp.}
+    \value	{5000}
   }
   
-\NEW{ItemLabel}{\iTinkerObjectThree}{
+\NEW{Item}{\iTinkerObjectThree}{
   \s\MYname	{MassageChair}
   \s\MYnumber	{0000}
-  \s\MYtext	{Comfortable-looking chair upholstered in black leather that reclines and massages. Worth \$10,000}
+  \s\MYtext	{Comfortable-looking chair upholstered in black leather that reclines and massages.}
+  \value	{10000}
   }  
   
   
