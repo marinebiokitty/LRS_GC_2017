@@ -101,10 +101,23 @@
 
 \NEW{MemEnvelope}{\mLoseCity}{
 	\s\MYname{Open if you lose control of a city.}
-	\s\MYtext{Your allies  hastily organize to attempt to retake \pCityO{}.  You may follow the instructions to attack cities from the attached greensheet.  Your allies will be in place 20 minutes from now.  This will be your only chance, but if you succeed you will retake the city (as if it were your second successful attack).}
+	\s\MYtext{Your allies hastily organize to attempt to retake \pCityO{}.  You may follow the instructions to attack cities from the attached greensheet.  Your allies will be in place 20 minutes from now.  This will be your only chance, but if you succeed you will retake the city (as if it were your second successful attack).}
 	\s\MYgreens{\gAttackCities{}}
 }
 
+\NEW{MemEnvelope}{\mBecomeHero}{
+	\s\MYname{Open if you decide to become a hero.}
+	\s\MYtext{Use the \aMoralStand{} ability now.  At the end of your speech, announce ``I, {\emph Your Name Here}, declare I am a superhero, with the name {\emph Choose Superhero Name Here}!''}
+	\s\MYabils{\aMoralStand{}}
+	\s\MYblues{\bHeroLeague{}}
+}
+
+\NEW{MemEnvelope}{\mBecomeVillain}{
+	\s\MYname{Open if you decide to become a villain.}
+	\s\MYtext{Use the \aMonologue{} ability now.  At the end of your speech, announce ``I, {\emph Your Name Here}, declare I am a supervillain, with the name {\emph Choose Superhero Name Here}!''}
+	\s\MYabils{\aMonologue{}}
+	\s\MYblues{\bVillainCompact{}}
+}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
