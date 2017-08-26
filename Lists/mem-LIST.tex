@@ -74,23 +74,38 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\NEW{MemFold}{\mTest}{
-  \s\MYname	{Test Trigger}
-  \s\MYtext	{This is a Test of a fold-n-staple memory packet}
-  }
-	
+% \NEW{MemFold}{\mTest}{
+%  \s\MYname	{Test Trigger}
+%  \s\MYtext	{This is a Test of a fold-n-staple memory packet}
+%  }
+  	
 	 \NEW{MemFold}{\mOSTalkYS}{
-  	\s\MYname	{Open if you talk with <NAME> } %\cYS{}
-  	\s\MYtext	{When you hear \cYS{}'s voice. You realize that this is your former trainee Surge from the Chicago Incident. \cYS{\They} look different from all those years ago, but you are sure its the same person.   } 
+  	\s\MYname	{Open if you talk one-on-one with a character with badge number 116.} %\cYS{\MYnumber}
+  	\s\MYtext	{You realize that this is your former trainee \cYS{\MYsupername} from the Chicago Incident. \cYS{\Theyare} much older, and difficult to recognize, but after hearing \cYS{\their} voice you are certain it's \cYS{\them}.  } 
 		}
-		
+\NEW{MemFold}{\mOSLeaveLeague}{
+  	\s\MYname	{Open if you leave the 
+			League of Heroes.%\cHeroLeague{\intro}
+			}
+  	\s\MYtext	{If the League is in public favor, they start moving to reduce your influence in \pCityO{}.  Let $PR$ be the current PR score of the \cHeroLeague{\intro}.  If $PR \ge 5$, subtract $PR - 4$ from your Influence score.}
+		}
 		\NEW{MemFold}{\mTweenTalkYS}{
-  	\s\MYname	{Open if you talk with <NAME> about their <NAME> super powers } % \cYS{} \cYS{\their}
-  	\s\MYtext	{After talking with \cYS{} about their \cYS{\their} super powers before you realize that you remember another super having those powers. You think you might should check the Super Know Website. } 
+  	\s\MYname	{Open if you talk with a character with badge number 116 about their super powers. } % \cYS{} \cYS{\their}
+  	\s\MYtext	{After talking with this person about \cYS{\their} super powers before you realize that you remember another superhuman having those powers.  It might be a good idea to research them on \pTweenwebsite{}. } 
 		}
-  
-  
-	
-	
+\NEW{MemEnvelope}{\mTakeCity}{ % TODO: check with Acata that I did this right
+	\s\MYname{Open if you take control of a city you attack.}
+	\s\MYtext{You've gained at least temporary control of the city, but others may try to take it back.}
+	\s\MYgreens{\gDefendCities{}}
+}
+
+\NEW{MemEnvelope}{\mLoseCity}{
+	\s\MYname{Open if you lose control of a city.}
+	\s\MYtext{Your allies  hastily organize to attempt to retake \pCityO{}.  You may follow the instructions to attack cities from the attached greensheet.  Your allies will be in place 20 minutes from now.  This will be your only chance, but if you succeed you will retake the city (as if it were your second successful attack).}
+	\s\MYgreens{\gAttackCities{}}
+}
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

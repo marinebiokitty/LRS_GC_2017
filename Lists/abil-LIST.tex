@@ -23,105 +23,121 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\NEW{Abil}{\aTest}{
-  \s\MYname	{Test Ability}
-  \s\MYtext	{You are a test.}
-  \s\MYeffect	{This is a Test.}
-  }
+%\NEW{Abil}{\aTest}{
+%  \s\MYname	{Test Ability}
+%  \s\MYtext	{You are a test.}
+%  \s\MYeffect	{This is a Test.}
+%  }
 
-\NEW{Abil}{\aPublishOnInternet}{
+\NEW{Abil}{\aPublishOnInternet}{ % TODO: move this just to greensheet
   \s\MYname	{Publishing on The Super Know}
   \s\MYtext	{Using your screen name The Ear on the Super Know website to publish stories and questions about super heroes. Unlimited Usage.}
   \s\MYeffect	{  }}  %pull from press mechanic 
-
+ 
 \NEW{Abil}{\aAskTheInternet}{
   \s\MYname	{Ask the Internet}
   \s\MYtext	{Use your contacts online to confirm, track down, and figure out information.  Usable three times.}
-  \s\MYeffect	{ Write down your question answered or the fact you want confirmed on a piece of paper. Roll a d6 six. Multiple the result by 5. Write this number also on the paper. Give the paper to a GM. Set a timer for this number of mintues. When your timer goes off, return the the GM for your answer. }}
+  \s\MYeffect	{ Write down your question answered or the fact you want confirmed on a piece of paper. Roll a d6.  Multiply the result by 5.  Write this number also on the paper. Give the paper to a GM. Set a timer for this number of minutes. When your timer goes off, return the the GM for your answer. }}
 
 \NEW{Abil}{\aMonologue}{
   \s\MYname	{Monologue}
-  \s\MYtext	{Deliver a villainous monologue.}
-  \s\MYeffect	{Raise your hands above your head and deliver a loud, evil laugh.  
-You may speak for up to ninety seconds.  Everyone in the room when you begin your monologue must stay in the room and listen to you without interruptions.  
+  \s\MYeffect	{Everyone in the room must listen to my villainous monologue for ninety seconds.  They can continue working on tasks that won't interfere with listening.  I cannot be interrupted.}
+  \s\MYtext	{Begin a villainous monologue with an evil laugh.  After this, you may speak for up to ninety seconds.  Everyone in the room when you begin your monologue must stay in the room and listen to you without interruptions.  
 You may continue speaking after ninety seconds, but other players may leave or interrupt at that time.
-Other characters can continue tasks they were already working on as they listen, but cannot use other abilities. 
+Other characters can continue tasks they were already working on as they listen, but cannot use other abilities.
 Once you have finished one monologue, you cannot start another for five minutes.
-Usable twice.
+\\ {\bf Usable twice.}
 } % If they're picking a lock etc they can continue.
   }
 \NEW{Abil}{\aMoralStand}{
   \s\MYname	{Moral Stand}
-  \s\MYtext	{Deliver a compelling moral speech.  }
-  \s\MYeffect	{Place your hand on your heart and look heroically into the distance.  You may speak for up to ninety seconds on some matter of moral principle, such as loyalty, family unity, honoring one's You may speak for up to ninety seconds.  Everyone in the room when you begin your speech must stay in the room and listen to you without interruptions.  
+  \s\MYeffect	{I choose any number of people in the same room as me.  Everyone I choose must listen to my heroic speech for ninety seconds.  They can continue working on tasks that won't interfere with listening.  I cannot be interrupted.}
+  \s\MYtext	{Place your hand on your heart and look heroically into the distance.  Choose any number of people in the same room as you.  You may speak for up to ninety seconds on some matter of moral principle, such as loyalty, family unity, or honoring one's parents. You may speak for up to ninety seconds.  Everyone you chose must stay in the room and listen to you.  You cannot be interrupted while you are speaking.
 You may continue speaking after ninety seconds, but other players may leave or interrupt at that time.
 Other characters can continue tasks they were already working on as they listen, but cannot use other abilities. 
 Once you have finished one speech, you cannot start another for five minutes.
-Usable twice.
+\\ {\bf Usable twice.}
 } % If they're picking a lock etc they can continue.
 
   }
 \NEW{Abil}{\aFreezePerson}{
   \s\MYname	{Freeze Person}
-  \s\MYtext	{Freeze a person in place with your superpower.}
-  \s\MYeffect	{If used on a character, they are frozen for ninety seconds, unable to move, act, or communicate.  Other characters see them as covered in ice.
-		 Once used, this ability cannot be used again for ten minutes. Usable twice.}
+  \s\MYeffect	{You are frozen in place for ninety seconds, unable to move, act, communicate, or be moved.  Other players see you as covered in ice.}
+  \s\MYtext	{The targeted player is frozen in place for ninety seconds, unable to move, act, communicate, or be moved.  Other players see them as covered in ice.
+		 Once used, this ability cannot be used again for ten minutes. \\ {\bf Usable twice.  This is a superpower.}}
 }
 \NEW{Abil}{\aFreezeObject}{
   \s\MYname	{Freeze Object}
-  \s\MYtext	{You have a superpower to freeze objects.}
-  \s\MYeffect	{Place a blue sticker on an object, and write the current time plus five minutes on the sticker.  Other characters see the item as covered in ice until that time.  The item cannot be moved or used in that time, though characters can look at the items through the ice.
-Once used, this ability cannot be used again for ten minutes.  Usable twice.}
+  \s\MYeffect   {I cover an object in ice.}
+  \s\MYtext	{Place a purple sticker on an object, and write the current time plus five minutes on the sticker.  Other characters see the item as covered in ice until that time.  The item cannot be moved or used in that time, though characters can look at the items through the ice.
+Once used, this ability cannot be used again for ten minutes.  \\ {\bf Usable twice.  This is a superpower.}}
   }
 \NEW{Abil}{\aZapObject}{
   \s\MYname	{Zap Device}
-  \s\MYtext	{You can zap electronic devices, making them temporarily unusable.}
-  \s\MYeffect	{You may touch an electronic device.  Mark it with a yellow sticker, with the current time plus five minutes.  That device is not usable until that time.
+  \s\MYeffect	{I temporarily short out an electronic device.}
+  \s\MYtext	{Touch a device marked as tinkerable.  Mark it with a yellow sticker, with the current time plus five minutes.  That device cannot be used or tinkered until that time, though it can be taken and moved. \\ {\bf Usable twice. This is a superpower.}
 }
   }
 \NEW{Abil}{\aZapPerson}{
   \s\MYname	{Zap Person}
-  \s\MYtext	{You can zap people with electricity, making them temporarily unable to use electronics.}
-  \s\MYeffect	{If another person is in your ZoC, point to them and say "I zap you."  That person cannot use electronic devices, including phones, for three minutes.  The victim is aware of the effect, but others see nothing.
-Once used, this ability cannot be used again for ten minutes.  Usable twice.
+  \s\MYeffect	{I give your body an electric charge.  You cannot use electronics, including phones, for three minutes.  You are aware of the effect, though it is not visible to others.}
+  \s\MYtext	{If another person is in your ZoC, point to them and say "I zap you."  That person cannot use electronic devices, including phones, for three minutes.  The victim is aware of the effect, but others see nothing.
+Once used, this ability cannot be used again for ten minutes. \\ {\bf Usable twice.  This is a superpower.}
 }
   }
 \NEW{Abil}{\aPhase}{
   \s\MYname	{Phase Through Walls}
-  \s\MYtext	{You have a superpower to pass through walls and locked doors.}
-  \s\MYeffect	{Walk to the other side, unless you are affected by an ability that prevents you from leaving the current room or conversation.  Characters on either side of the wall or door see this happen.   Usable at any time, as many times as you like.}
+  \s\MYeffect	{You see me walk through a wall or locked door.}
+  \s\MYtext	{Walk to the other side, unless you are affected by an ability that prevents you from leaving the current room or conversation.  Characters on either side of the wall or door see this happen.   {\bf Usable at any time, as many times as you like.  This is a superpower.}}
   }
 \NEW{Abil}{\aInvisibility}{
   \s\MYname	{Invisibility}
-  \s\MYtext	{You have a superpower to become invisible.}
-  \s\MYeffect	{Don a headband which marks you as invisible.  Other players cannot see you, though they can hear you and recognize your voice if you speak.  You can return to visibility any time you like, but cannot stay invisible for longer than five minutes at a time.   Once you become visible again, this ability cannot be used for another minute.  Usable up to five times.}
+  \s\MYeffect	{I go invisible, though I can still be heard.}
+  \s\MYtext	{Don a white headband which marks you as invisible.  Other players cannot see you, though they can hear you and recognize your voice if you speak.  You can return to visibility any time you like, but cannot stay invisible for longer than five minutes at a time.   Once you become visible again, this ability cannot be used for another minute. \\ {\bf Usable up to five times.  This is a superpower.}}
   }
 \NEW{Abil}{\aSpeed}{
   \s\MYname	{Super Speed}
-  \s\MYtext	{You have a superpower to move very quickly.}
-  \s\MYeffect	{If you see another player in the same room as you, you may point at them and say "Zoom!"  Move right next to them.  They must describe what they were doing when you said "Zoom!"  You may speak to them, try to stop them, or otherwise interact with them as usual.  Other characters see you move.  Usable up to five times.}
+  \s\MYeffect	{I move to you at super speed, and see in detail what you were doing when I triggered this ability.}
+  \s\MYtext	{If you see another player in the same room as you, you may point at them and say ``Zoom!''  Move right next to them.  They must describe what they were doing when you said ``Zoom!''  You may speak to them, try to stop them, or otherwise interact with them as usual.  Other characters see you move. \\ {\bf Usable up to five times.  This is a superpower.}}
   }
 \NEW{Abil}{\aHearing}{
   \s\MYname	{Super Hearing}
-  \s\MYtext	{You have a superpower to listen to quiet or distant conversations.}
-  \s\MYeffect	{If a conversation is taking place in the same room as you, you can choose to overhear it.  Walk over to the conversation and listen in.  Other players see you doing whatever you were doing before; e.g. if you were on your phone across the room, you still appear to be on your phone across the room.  Usable at any time, as many times as you like.}
+  \s\MYeffect	{I overhear your conversation from elsewhere in the room.  I seem to be doing whatever I was doing before; you cannot tell I am listening.}
+  \s\MYtext	{If a conversation is taking place in the same room as you, you can choose to overhear it.  Walk over to the conversation and listen in.  Other players see you doing whatever you were doing before; e.g. if you were on your phone across the room, you still appear to be on your phone across the room.  {\bf Usable at any time, as many times as you like.  This is a superpower.}}
   }
 \NEW{Abil}{\aNullification}{
   \s\MYname	{Nullification}
-  \s\MYtext	{You can cancel out other superpowers.}
-  \s\MYeffect	{When your character touches another player (whether narrated or roleplayed), you (whether intentionally or not) nullify their powers; tell that player that they are nullified.  For the next three minutes, that player cannot use any ability whose text includes the word `superpower.'  Repeated touches reset the three-minute timer, up to a maximum of ten minutes.  After they regain their powers, they cannot be nullified again for ten minutes.}
+  \s\MYeffect	{You cannot use your superpower for three minutes after I touch you, up to a maximum of ten minutes.}
+  \s\MYtext	{This ability {\emph automatically} triggers when you touch another character, whether you want it to trigger or not.  \\
+That character's superpowers are nullified.  For the next three minutes, that player cannot use any ability which says ``This is a superpower.''  Repeated touches reset the three-minute timer, up to a maximum of ten minutes.  After the character regains their powers, their powers cannot be nullified again for ten minutes.  \\ {\bf This is a superpower, but it cannot be affected by other superpowers.}}
   }
 \NEW{Abil}{\aAmplification}{
   \s\MYname	{Amplification}
-  \s\MYtext	{You can enhance other superpowers.}
-  \s\MYeffect	{If another player is in touch range, you may say "I amplify you."  For the next five minutes, that player's abilities are enhanced.  If that player has an ability with the word `superpower' in its text, and that ability's effects last $N$ minutes, they last for $N+2$ minutes if used within five minutes of you touching them.  After you use this ability, you cannot use it again for ten minutes.  This ability can be used three times.}
+  \s\MYeffect   {I enhance your superpowers.   Any of your abilities that say ``This is a superpower,'' that has effects lasting for $N$ minutes, lasts for $N+2$ minutes if used within five minutes of this ability.}
+  \s\MYtext	{If another player is in touch range, you may touch them and amplify their superpowers.  For the next five minutes, that player's abilities are enhanced. After you use this ability, you cannot use it again for ten minutes.  \\ {\bf This ability can be used three times.  This is a superpower.}}
   }
 \NEW{Abil}{\aIrresistible}{
   \s\MYname	{Irresistible}
-  \s\MYtext	{Your partner in a preexisting sexual relationship finds you irresistibly fascinating.}
-  \s\MYeffect	{Your partner finds you the most interesting thing in the room for one minute, and is compelled to stop what they are doing and converse with you during that time.  During that time, that player may only use touch-based abilities, and only on you.  Once this ability has been used, you may not use it again for twenty minutes.  Usable twice.}
+  \s\MYeffect	{You find me irresistibly attractive.  You are compelled to stop what you are doing and converse with me for one minute.}
+  \s\MYtext	{Your partner in a preexisting sexual relationship finds you irresistibly fascinating.  As far as they are concerned, you are the most interesting thing in the room for one minute.  They must stop what they are doing and converse with you during that time.  During that time, that character may only use touch-based abilities, and only on you.  Once this ability has been used, you may not use it again for twenty minutes.  \\ {\bf Usable twice.}}
   }
-	
+\NEW{Abil}{\aGradEndorse}{
+  \s\MYname	{Request Endorsement}
+  \s\MYeffect	{You may choose to give this character's startup an endorsement, for \$10,000.  This may provide PR benefits.}
+  \s\MYtext	{You may ask this character to fund your startup.  If they accept, they must give you \$10,000, and the cost of launching your startup goes down by an additional \$10,000.  (So you are \$20,000 closer to launching your startup.)\\
+If the character is a member of the \cHeroLeague{\intro}, the PR score goes up by 1.  If the character is a member of the \cVillainCompact{\intro}, the PR score goes down by 1.
+\\ If the player endorses you, this ability is consumed.  If they do not, you may try this ability again.  You may not use this ability on the same player more than once every ten minutes.}
+}
+\NEW{Abil}{\aGradLaunchStartup}{
+  \s\MYname	{Launch Startup}
+  \s\MYeffect	{}
+  \s\MYtext	{You may launch your startup using \$50,000 in assets, combined between cash and sellable items.  You cannot include \iBulletproofCape{} in these assets.  Give all the necessary assets to a GM.
+		\\ The cost is reduced by \$10,000 if you have successfully used \aGradEndorse{}.  If you were endorsed by a member of the \cHeroLeague{\intro}, the PR score goes up by 1 again; if you were endorsed by a member of the \cVillainCompact{\intro}, the PR score goes down by 1 again.
+\\
+Your Influence score rises by 1.
+ \\
+You will receive change from the GM if you give over \$50,000.  \\ {\bf This ability is consumed when you use it.}}
+}
 %\NEW{Abil}{\aSpecial}{
   %\s\MYname	{Special Powers}
   %\s\MYtext	{You have special powers, as detailed in your \gTest{}
@@ -131,11 +147,11 @@ Once used, this ability cannot be used again for ten minutes.  Usable twice.
   %\suite
   %}
 
-\NEW{Abil}{\aFiremansCarry}{
-  \s\MYname	{Fireman's Carry}
-  \s\MYtext	{You can carry a body as if it were two hands bulky.}
-  \s\MYeffect	{I can carry this body well.}
-  }
+%\NEW{Abil}{\aFiremansCarry}{
+%  \s\MYname	{Fireman's Carry}
+%  \s\MYtext	{You can carry a body as if it were two hands bulky.}
+%  \s\MYeffect	{I can carry this body well.}
+%  }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -145,29 +161,29 @@ Once used, this ability cannot be used again for ten minutes.  Usable twice.
 
 
 %% Everyone has these 3
-\NEW{Abil}{\aAssist}{
-  \s\MYname	{Assist}
-  \s\MYtext	{You can assist someone else's attack.  You must be
-		within ZoC of both the attacker and target.  Within two
-		seconds of an attack, direct this at the attacker,
-		saying ``\MYname'' and your CR.}
-  \s\MYeffect	{I assist your attack.}
-  }
+%\NEW{Abil}{\aAssist}{
+%  \s\MYname	{Assist}
+%  \s\MYtext	{You can assist someone else's attack.  You must be
+%		within ZoC of both the attacker and target.  Within two
+%		seconds of an attack, direct this at the attacker,
+%		saying ``\MYname'' and your CR.}
+%  \s\MYeffect	{I assist your attack.}
+%  }
 
-\NEW{Abil}{\aKnockOut}{
-  \s\MYname	{Knock Out}
-  \s\MYtext	{You can knock someone out as an attack.  This requires
-		a {\bf blunt} weapon.  Say ``\MYname'' and your CR.}
-  \s\MYeffect	{I knock you out.}
-  }
+% \NEW{Abil}{\aKnockOut}{
+%  \s\MYname	{Knock Out}
+%  \s\MYtext	{You can knock someone out as an attack.  This requires
+		%a {\bf blunt} weapon.  Say ``\MYname'' and your CR.}
+%  \s\MYeffect	{I knock you out.}
+%  }
 
-\NEW{Abil}{\aWound}{
-  \s\MYname	{Wound}
-  \s\MYtext	{You can wound someone as an attack.  This requires an
-		{\bf edged} weapon, such as a knife.  Say ``\MYname'' and
-		your CR.}
-  \s\MYeffect	{I wound you.}
-  }
+%\NEW{Abil}{\aWound}{
+%  \s\MYname	{Wound}
+%  \s\MYtext	{You can wound someone as an attack.  This requires an
+%		{\bf edged} weapon, such as a knife.  Say ``\MYname'' and
+%		your CR.}
+%  \s\MYeffect	{I wound you.}
+%  }
 
 
 %% the \basecombat macro can be prepended to the Char abils list
@@ -175,31 +191,31 @@ Once used, this ability cannot be used again for ten minutes.  Usable twice.
 \def\basecombat{\aKnockOut{}\aWound{}\aAssist{}}
 
 %% only some people have these
-\NEW{Abil}{\aDisarm}{
-  \s\MYname	{Disarm}
-  \s\MYtext	{You can disarm one item from someone as an attack.  Say
-		``\MYname'' and your CR.  Point at the item you want to
-		disarm.  If the attack works, they must drop that item.}
-  \s\MYeffect	{I disarm that item.}
-  }
+%\NEW{Abil}{\aDisarm}{
+%  \s\MYname	{Disarm}
+%  \s\MYtext	{You can disarm one item from someone as an attack.  Say
+%		``\MYname'' and your CR.  Point at the item you want to
+%		disarm.  If the attack works, they must drop that item.}
+%  \s\MYeffect	{I disarm that item.}
+%  }
 
-\NEW{Abil}{\aRestrain}{
-  \s\MYname	{Restrain}
-  \s\MYtext	{You can restrain someone as an attack.  Say ``\MYname''
-		and your CR.  You may freely drag, attack, or (if you have
-		a weapon) killing-blow them.  To do anything else, or if
-		your health state changes, incant ``release'' and let them
-		go.}
-  \s\MYeffect	{I restrain you.  You are restrained until I incant
-		``release.''}
-  }
-\NEW{Abil}{\aThrow}{
-  \s\MYname	{Throw}
-  \s\MYtext	{You can throw someone as an attack.  Say ``\MYname'' and
-		your CR.  Point in the direction you want to throw them.}
-  \s\MYeffect	{I throw you.  Go in the direction I point ten full steps
-		or until you hit a wall or similar.}
-  }
+%\NEW{Abil}{\aRestrain}{
+%  \s\MYname	{Restrain}
+%  \s\MYtext	{You can restrain someone as an attack.  Say ``\MYname''
+%		and your CR.  You may freely drag, attack, or (if you have
+%		a weapon) killing-blow them.  To do anything else, or if
+%		your health state changes, incant ``release'' and let them
+%		go.}
+%  \s\MYeffect	{I restrain you.  You are restrained until I incant
+%		``release.''}
+%  }
+%\NEW{Abil}{\aThrow}{
+%  \s\MYname	{Throw}
+%  \s\MYtext	{You can throw someone as an attack.  Say ``\MYname'' and
+%		your CR.  Point in the direction you want to throw them.}
+%  \s\MYeffect	{I throw you.  Go in the direction I point ten full steps
+%		or until you hit a wall or similar.}
+%  }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
