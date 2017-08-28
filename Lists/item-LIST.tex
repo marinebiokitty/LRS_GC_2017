@@ -151,36 +151,35 @@
   \s\MYtext	{Disc gun, loadable to 20 shots.}
   }
   
-  
-\NEW{Item}{\iEngagementRings}{
-  \s\MYname	{EngagementRings}
+\NEW{ItemFold}{\iEngagementRings}{
+  \s\MYname	{Engagement Rings}
   \s\MYnumber	{0000}
   \s\MYtext	{A pair of shiny platinum rings set with large purple stones.}
-%  \s\MYcontents	{You can now communicate with the wearer of the other ring from miles away.}
+ \s\MYcontents		{You can now communicate with the wearer of the other ring from miles away.}
   \value	{\$20,000}
   }
   
-\NEW{Item}{\iBagofHolding}{
-  \s\MYname	{BagofHolding}
+\NEW{ItemFold}{\iBagofHolding}{
+  \s\MYname	{Bag of Holding}
   \s\MYnumber	{0000}
   \s\MYtext	{An innocuous slouchy bag.}
-%   \s\MYcontents	{You can now hide anything in this bag.}
+%\s\MYcontents	{You can now hide anything in this bag.}
      \value	{\$10,000}
   }
   
-  
 \NEW{Item}{\iFancyUtilityBelt}{
-  \s\MYname	{FancyUtilityBelt}
+  \s\MYname	{Utility Belt}
   \s\MYnumber	{0000}
-  \s\MYtext	{Climbing and grappling gear that retracts to a shiny belt.  You can now swing over any obstacles in your path.}
+  \s\MYtext	{Climbing and grappling gear that retracts to a shiny belt. You can now swing over any obstacles in your path.}
     \value	{\$10,000}
   \tinker{}
   }
   
-\NEW{Item}{\iBulletproofCape}{
-  \s\MYname	{BulletproofCape}
+\NEW{ItemFold}{\iBulletproofCape}{
+  \s\MYname	{Bulletproof Cape}
   \s\MYnumber	{0000}
-  \s\MYtext	{Top of the line bulletproof cape sample.  You cannot be harmed by bullets while wearing this.}
+  \s\MYtext	{Top of the line bulletproof cape sample.}
+   \s\MYcontents	{Bullets cannot harm you.}
       \value	{\$10,000}
   \tinker{}
   }
@@ -193,21 +192,20 @@
   \tinker	{}
   }
   
-  \NEW{Item}{\iArtworkTwo}{
+  \NEW{ItemFold}{\iArtworkTwo}{
   \s\MYname	{To Incite}
   \s\MYnumber	{0000}
   \s\MYtext	{Masterful oil painting in bold strokes. Heavily inspired by the classical but looks to be fairly new.}
-  %  \s\MYcontents	{I was painted by someone special.} % Is this too obvious?
-  \value	{\$30,000}
+    \s\MYcontents	{The audience and the artist are often two sides of the same coin.} 
+      \value	{\$30,000}
   \bulky	{2}
   }
   
-  \NEW{Item}{\iArtworkThree}{
+  \NEW{ItemFold}{\iArtworkThree}{
   \s\MYname	{Map Key}
   \s\MYnumber	{0000}
   \s\MYtext	{A mesmerizing installation made of 1962 colored keys.}
    % \s\MYcontents	{In order to complete this course you must steal \iBagofHolding{} and bring it to me. The first person who does this will receive the prize.}
-   % this does not compile.  Needs to be an envelope for that to work maybe?  The outside of the item needs to say how to break in!s
       \value	{20000}
   }
   
