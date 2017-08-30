@@ -3,10 +3,13 @@ LRSguildcamp1_path.cls
 *.pdf
 *.gz
 *.log
+*.sty~
+*.cls~
 *.gz(busy)
 *.toc
 *.fls
 *.dvi
+*.tex~
 *latexmk
 LaTeX/LRSguildcamp1_path.cls.tex
 LaTeX/LRSguildcamp1_path.cls
