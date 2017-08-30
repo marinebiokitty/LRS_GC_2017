@@ -40,6 +40,7 @@
 %% linebreaks in these and keep their lengths reasonable.
 \def\gamename{With Family Like This...}
 \def\gamedate{Sep 17, 2017}
+\def\organization{Luminary Roleplay Society}
 
 
 %%%%%
