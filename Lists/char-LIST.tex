@@ -111,6 +111,7 @@
 \pronoun{\Theirs}	{His}{Hers}{Theirs}
 \pronoun{\theyare}      {he is}{she is}{they are}
 \pronoun{\Theyare}      {He is}{She is}{They are}
+\pronoun{\are}      	{is}{is}{are}
 \pronoun{\theywere}     {he was}{she was}{they were}
 \pronoun{\theyhave}     {he has}{she has}{they have}
 \pronoun{\Theyhave}     {He has}{She has}{They have}
@@ -119,9 +120,10 @@
 \pronoun{\Themself}	{Himself}{Herself}{Themself}
 \pronoun{\spouse}	{husband}{wife}{spouse}
 \pronoun{\Spouse}	{Husband}{Wife}{Spouse}
+\pronoun{\do}		{does}{does}{do}
 \pronoun{\familyleader}	{patriarch}{matriarch}{leader}
-\pronoun{\offspring}	{son}{daughter}{offspring}
-\pronoun{\Offspring}	{Son}{Daughter}{Offspring}
+\pronoun{\offspring}	{son}{daughter}{child}
+\pronoun{\Offspring}	{Son}{Daughter}{Child}
 \pronoun{\kid}		{boy}{girl}{kid}
 \pronoun{\Kid}		{Boy}{Girl}{Kid}
 \pronoun{\waif}		{urchin}{waif}{stray}
@@ -216,7 +218,7 @@
   \s\MYsupername{Voil\'a}
   \s\MYsuperpower{Walking through walls}
   \s\MYblues	{\bWorld{}\bVillainCompact{}\bChicagoIncident{}}
-  \s\MYgreens	{\gAttackCities{}\gStealing{}}
+  \s\MYgreens	{\gAttackCities{}\gStealing{}\gSellingThing{}}
   \s\MYabils	{\aPhase{}\aMonologue{}}
   \s\MYitems	{\iEngagementRings{}}
   \s\MYwhites	{}
@@ -227,7 +229,7 @@
 
 \NEW{PC}{\cArchitect}{
   \s\MYname	{Theodore Kaper}
-  \nickname	{Ted}
+%  \nickname	{Ted}
   \s\MYfile	{Architect.tex}
   \s\MYnumber	{518} % randomly generated
   \s\MYdesc	{}
@@ -235,7 +237,7 @@
   \s\MYplayer	{Aaron Sunshine}
   \s\MYsupername{N/A}
   \s\MYblues	{\bWorld{}\bChicagoIncident{}}
-  \s\MYgreens	{}
+  \s\MYgreens	{\gSellingThing{}}
   \s\MYabils	{\aNullification{}}
   \s\MYsuperpower{Disabling other powers}
   \s\MYitems	{}
@@ -254,7 +256,7 @@
   \s\MYplayer	{Sharon Beltracchi}
   \s\MYsupername{Undecided}
   \s\MYblues	{\bWorld{}\bChicagoIncident{}}
-  \s\MYgreens	{\gStealing{}}
+  \s\MYgreens	{\gStealing{}\gSellingThing{}}
   \s\MYabils	{}
 	\s\MYsuperpower{Tech wizardry}
   \s\MYitems	{}
@@ -273,7 +275,7 @@
   \s\MYplayer	{Mark Stone}
   \s\MYsupername{Undecided}
   \s\MYblues	{\bWorld{}\bChicagoIncident{}}
-  \s\MYgreens	{\gStealing{}}
+  \s\MYgreens	{\gStealing{}\gSellingThing{}}
   \s\MYabils	{\aHearing{}}
 	\s\MYsuperpower{Super hearing}
   \s\MYitems	{}
@@ -294,7 +296,7 @@
   \s\MYplayer	{Matt Fisher}
   \s\MYinfluence{2}
   \s\MYblues	{\bWorld{}\bVillainCompact{}\bChicagoIncident{}}
-  \s\MYgreens	{\gDefendCities{}\gStealing{}}
+  \s\MYgreens	{\gDefendCities{}\gStealing{}\gSellingThing{}}
   \s\MYabils	{\aFreezePerson{}\aFreezeObject{}\aMonologue{}\aIrresistible{}}
   \s\MYitems	{}
   \s\MYwhites	{\wVillainRecruitment{}}
@@ -314,7 +316,7 @@
   \s\MYplayer	{John Lamperez}
   \s\MYinfluence{2}
   \s\MYblues	{\bWorld{}\bHeroLeague{}\bChicagoIncident{}}
-  \s\MYgreens	{\gAttackCities{}}
+  \s\MYgreens	{\gAttackCities{}\gSellingThing{}}
   \s\MYabils	{\aMoralStand{}\aZapPerson{}\aZapObject{}\aIrresistible{}}
   \s\MYitems	{\iBagofHolding{}}
   \s\MYwhites	{\wHeroRecruitment{}}
@@ -334,7 +336,7 @@
   \s\MYplayer	{Kelsey Miranda}
   \s\MYinfluence{3}
   \s\MYblues	{\bWorld{}\bHeroLeague{}\bChicagoIncident{}}
-  \s\MYgreens	{\gDefendCities{}}
+  \s\MYgreens	{\gDefendCities{}\gSellingThing{}}
   \s\MYabils	{\aMoralStand{}\aSpeed{}}
   \s\MYitems	{}
   \s\MYwhites	{\wHeroRecruitment{}}
@@ -353,7 +355,7 @@
   \s\MYplayer	{Abigail Stone}
   \s\MYinfluence{1}
   \s\MYblues	{\bWorld{}\bChicagoIncident{}}
-  \s\MYgreens	{}
+  \s\MYgreens	{\gSellingThing{}\gNewspaperPR{}}
   \s\MYabils	{\aAmplification{}}
   \s\MYsuperpower{Enhancing other powers}
   \s\MYitems	{\iFancyUtilityBelt{}}
@@ -362,6 +364,7 @@
   \s\MYmems	{\mBecomeHero{}\mBecomeVillain{}}
   \s\MYcr{}
 }
+\newcommand{\cYSOldName}[0]{Surge}
 
 \NEW{PC}{\cGrad}{
   \s\MYname	{Jordan Steele-Kaper}
@@ -372,7 +375,7 @@
   \s\MYplayer	{Autumn G.}
   \s\MYinfluence{0}
   \s\MYblues	{\bWorld{}\bChicagoIncident{}}
-  \s\MYgreens	{\gStealing{}}
+  \s\MYgreens	{\gStealing{}\gSellingThing{}}
   \s\MYabils	{\aInvisibility{}\aGradEndorse{}\aGradLaunchStartup{}}
   \s\MYsuperpower{Invisibility}
   \s\MYsupername{Undecided}
@@ -405,7 +408,7 @@
 \NEW{NPC}{\cChrisHemsworth}{
   \s\MYname	{Chris Hemsworth}
   \s\MYnumber	{00000}
-  \s\MYdesc	{A Hollywood hottiey.}
+  \s\MYdesc	{A Hollywood hottie.}
   \s\MYsex	{\male}
 }
 
