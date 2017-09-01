@@ -51,7 +51,7 @@
 %% writing, \Final specifies that any \TODO commands remaining in the
 %% text of the game will not typeset any todo info (they will still
 %% output info to the terminal).
-\def\gamedraft{\Draft}
+\def\gamedraft{\Final}
 
 
 %%%%%
@@ -82,7 +82,7 @@
 %% Define \signdate as either \gamedate or \gamedateabbrev.  If you
 %% plan to leave signs up between different runs, \gamedate may be
 %% better.
-\def\takedownby{Sep 17, 2017}
+\def\takedownby{Sep 18, 2017}
 \def\signdate{\gamedateabbrev}
 
 
