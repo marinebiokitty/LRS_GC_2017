@@ -65,6 +65,8 @@
 %%
 %% would give character a Hit Points stat, abbreviated HP, referenced
 %% as the \MYhp field, that defaults to 5.
+
+\newif\ifsuper
 \PRESETS{Char}{
   \FD\MYdesc	{} %% badge description
 
@@ -81,7 +83,7 @@
   \FS\MYtext	{\ifx\MYfile\empty\else%
 		  \getextractenvs{document}{\chars/\MYfile}%
 		\fi}
-  \badgetrue\statstrue\skillstrue\sheettrue\listtrue\labeltrue
+  \badgetrue\statstrue\skillstrue\sheettrue\listtrue\labeltrue\supertrue
   }
 
 \POSTSETS{Char}{
@@ -101,26 +103,30 @@
 \newcommand{\mf}[2]{\mfn{#1}{#2}{}}
 \newcommand{\pronoun}[4]{\def#1{\mfn{#2}{#3}{#4}}}
 
-\pronoun{\they}		{he}{she}{it}
-\pronoun{\They}		{He}{She}{It}
-\pronoun{\them}		{him}{her}{it}
-\pronoun{\Them}		{Him}{Her}{It}
-\pronoun{\their}	{his}{her}{its}
-\pronoun{\Their}	{His}{Her}{Its}
-\pronoun{\theirs}	{his}{hers}{its}
-\pronoun{\Theirs}	{His}{Hers}{Its}
+\pronoun{\they}		{he}{she}{they}
+\pronoun{\They}		{He}{She}{They}
+\pronoun{\them}		{him}{her}{them}
+\pronoun{\Them}		{Him}{Her}{Them}
+\pronoun{\their}	{his}{her}{their}
+\pronoun{\Their}	{His}{Her}{Their}
+\pronoun{\theirs}	{his}{hers}{theirs}
+\pronoun{\Theirs}	{His}{Hers}{Theirs}
 \pronoun{\theyare}      {he is}{she is}{they are}
 \pronoun{\Theyare}      {He is}{She is}{They are}
+\pronoun{\are}      	{is}{is}{are}
 \pronoun{\theywere}     {he was}{she was}{they were}
 \pronoun{\theyhave}     {he has}{she has}{they have}
 \pronoun{\Theyhave}     {He has}{She has}{They have}
-\pronoun{\themself}	{himself}{herself}{itself}
-\pronoun{\Themself}	{Himself}{Herself}{Itself}
+\pronoun{\have}		{has}{has}{have}
+\pronoun{\themself}	{himself}{herself}{themself}
+\pronoun{\Themself}	{Himself}{Herself}{Themself}
 \pronoun{\spouse}	{husband}{wife}{spouse}
 \pronoun{\Spouse}	{Husband}{Wife}{Spouse}
+\pronoun{\do}		{does}{does}{do}
+\pronoun{\want}		{wants}{wants}{want}
 \pronoun{\familyleader}	{patriarch}{matriarch}{leader}
-\pronoun{\offspring}	{son}{daughter}{offspring}
-\pronoun{\Offspring}	{Son}{Daughter}{Offspring}
+\pronoun{\offspring}	{son}{daughter}{child}
+\pronoun{\Offspring}	{Son}{Daughter}{Child}
 \pronoun{\kid}		{boy}{girl}{kid}
 \pronoun{\Kid}		{Boy}{Girl}{Kid}
 \pronoun{\waif}		{urchin}{waif}{stray}
@@ -214,8 +220,8 @@
   \s\MYinfluence{4}
   \s\MYsupername{Voil\'a}
   \s\MYsuperpower{Walking through walls}
-  \s\MYblues	{\bWorld{}\bVillainCompact{}\bSuperFamily{}\bChicagoIncident{}}
-  \s\MYgreens	{\gAttackCities{}}
+  \s\MYblues	{\bWorld{}\bVillainCompact{}\bChicagoIncident{}}
+  \s\MYgreens	{\gAttackCities{}\gStealing{}\gSellingThing{}}
   \s\MYabils	{\aPhase{}\aMonologue{}}
   \s\MYitems	{\iEngagementRings{}}
   \s\MYwhites	{}
@@ -226,22 +232,22 @@
 
 \NEW{PC}{\cArchitect}{
   \s\MYname	{Theodore Kaper}
-  \nickname	{Ted}
+%  \nickname	{Ted}
   \s\MYfile	{Architect.tex}
   \s\MYnumber	{518} % randomly generated
   \s\MYdesc	{}
   \s\MYsex	{\male}
   \s\MYplayer	{Aaron Sunshine}
   \s\MYsupername{N/A}
-  \s\MYblues	{\bWorld{}\bSuperFamily{}\bChicagoIncident{}}
-  \s\MYgreens	{}
+  \s\MYblues	{\bWorld{}\bChicagoIncident{}}
+  \s\MYgreens	{\gSellingThing{}}
   \s\MYabils	{\aNullification{}}
   \s\MYsuperpower{Disabling other powers}
   \s\MYitems	{}
   \s\MYwhites	{}
   \s\MYcash	{}
-  
   \s\MYcr{}
+  \superfalse
 }
 
 \NEW{PC}{\cTeen}{
@@ -252,8 +258,8 @@
   \s\MYsex	{\male}
   \s\MYplayer	{Sharon Beltracchi}
   \s\MYsupername{Undecided}
-  \s\MYblues	{\bWorld{}\bSuperFamily{}\bChicagoIncident{}}
-  \s\MYgreens	{}
+  \s\MYblues	{\bWorld{}\bChicagoIncident{}}
+  \s\MYgreens	{\gStealing{}\gSellingThing{}}
   \s\MYabils	{}
 	\s\MYsuperpower{Tech wizardry}
   \s\MYitems	{}
@@ -261,6 +267,7 @@
   \s\MYcash	{}
   \s\MYmems	{\mBecomeHero{}\mBecomeVillain{}}
   \s\MYcr{}
+  \superfalse
 }
 
 \NEW{PC}{\cTween}{
@@ -271,32 +278,33 @@
   \s\MYsex	{\male}
   \s\MYplayer	{Mark Stone}
   \s\MYsupername{Undecided}
-  \s\MYblues	{\bWorld{}\bSuperFamily{}\bChicagoIncident{}}
-  \s\MYgreens	{}
+  \s\MYblues	{\bWorld{}\bChicagoIncident{}}
+  \s\MYgreens	{\gStealing{}\gSellingThing{}}
   \s\MYabils	{\aHearing{}}
 	\s\MYsuperpower{Super hearing}
   \s\MYitems	{}
-  \s\MYwhites	{}
+  \s\MYwhites	{\multi{4}{\wPressRelease{}}}
   \s\MYcash	{}
   \s\MYmems{\mTweenTalkYS{}\mBecomeHero{}\mBecomeVillain{}}
   \s\MYcr{}
+  \superfalse
 }
 
 \NEW{PC}{\cOldest}{
-  \s\MYname	{Oldest Kaper}
+  \s\MYname	{Victor Kaper}
   \s\MYfile	{Oldest.tex}
   \s\MYnumber	{579} % randomly generated
   \s\MYdesc	{A darkly handsome supervillain, going by the name Black Ice.}
 	\s\MYsupername{Black Ice}
 	\s\MYsuperpower{Ice control}
-  \s\MYsex	{\ambiguous}
-  \s\MYplayer	{}
+  \s\MYsex	{\male}
+  \s\MYplayer	{Matt Fisher}
   \s\MYinfluence{2}
-  \s\MYblues	{\bWorld{}\bVillainCompact{}\bSuperFamily{}\bChicagoIncident{}}
-  \s\MYgreens	{\gDefendCities{}}
+  \s\MYblues	{\bWorld{}\bVillainCompact{}\bChicagoIncident{}}
+  \s\MYgreens	{\gDefendCities{}\gStealing{}\gSellingThing{}}
   \s\MYabils	{\aFreezePerson{}\aFreezeObject{}\aMonologue{}\aIrresistible{}}
   \s\MYitems	{}
-  \s\MYwhites	{\wVillainRecruitment{}}
+  \s\MYwhites	{\multi{3}{\wVillainRecruitment{}}}
   \s\MYmems	{\mLoseCity{}}
   \s\MYcr{}
   \s\MYcash	{\cash{Dollar}{60000}}
@@ -311,32 +319,32 @@
   \s\MYdesc	{}
   \s\MYsex	{\male}
   \s\MYplayer	{John Lamperez}
-  \s\MYinfluence{2}
-  \s\MYblues	{\bWorld{}\bHeroLeague{}\bSuperFamily{}\bChicagoIncident{}}
-  \s\MYgreens	{\gAttackCities{}}
+  \s\MYinfluence{3}
+  \s\MYblues	{\bWorld{}\bHeroLeague{}\bChicagoIncident{}}
+  \s\MYgreens	{\gAttackCities{}\gSellingThing{}}
   \s\MYabils	{\aMoralStand{}\aZapPerson{}\aZapObject{}\aIrresistible{}}
   \s\MYitems	{\iBagofHolding{}}
-  \s\MYwhites	{\wHeroRecruitment{}}
+  \s\MYwhites	{\multi{3}{\wHeroRecruitment{}}}
   \s\MYmems	{\mOSLeaveLeague{}\mOSTalkYS{}\mTakeCity{}\mLoseCity{}}
   \s\MYcr{}
   \s\MYcash	{\cash{Dollar}{30000}}
 }
 
 \NEW{PC}{\cYoungest}{
-  \s\MYname	{YChild}
+  \s\MYname	{Isabella Kaper}
   \s\MYfile	{Youngest.tex}
 	\s\MYsupername{Roadrunner}
   \s\MYsuperpower{Super speed}
   \s\MYnumber	{993} % randomly generated
   \s\MYdesc	{}
-  \s\MYsex	{\ambiguous}
-  \s\MYplayer	{}
+  \s\MYsex	{\female}
+  \s\MYplayer	{Kelsey Miranda}
   \s\MYinfluence{3}
-  \s\MYblues	{\bWorld{}\bHeroLeague{}\bSuperFamily{}\bChicagoIncident{}}
-  \s\MYgreens	{\gDefendCities{}}
+  \s\MYblues	{\bWorld{}\bHeroLeague{}\bChicagoIncident{}}
+  \s\MYgreens	{\gDefendCities{}\gSellingThing{}}
   \s\MYabils	{\aMoralStand{}\aSpeed{}}
   \s\MYitems	{}
-  \s\MYwhites	{\wHeroRecruitment{}}
+  \s\MYwhites	{\multi{3}{\wHeroRecruitment{}}}
   \s\MYmems	{\mLoseCity{}}
   \s\MYcr{}
   \s\MYcash	{\cash{Dollar}{60000}}
@@ -351,27 +359,28 @@
   \s\MYsex	{\female}
   \s\MYplayer	{Abigail Stone}
   \s\MYinfluence{1}
-  \s\MYblues	{\bWorld{}\bSuperFamily{}\bChicagoIncident{}}
-  \s\MYgreens	{}
+  \s\MYblues	{\bWorld{}\bChicagoIncident{}}
+  \s\MYgreens	{\gSellingThing{}\gNewspaperPR{}}
   \s\MYabils	{\aAmplification{}}
   \s\MYsuperpower{Enhancing other powers}
   \s\MYitems	{\iFancyUtilityBelt{}}
-  \s\MYwhites	{}
+  \s\MYwhites	{\multi{2}{\wPressRelease{}}}
   \s\MYcash	{\cash{Dollar}{30000}}
   \s\MYmems	{\mBecomeHero{}\mBecomeVillain{}}
   \s\MYcr{}
 }
+\newcommand{\cYSOldName}[0]{Surge}
 
 \NEW{PC}{\cGrad}{
   \s\MYname	{Jordan Steele-Kaper}
   \s\MYfile	{Grad.tex}
   \s\MYnumber	{063} % randomly generated
   \s\MYdesc	{}
-  \s\MYsex	{\ambiguous} % TODO: fix their pronouns
+  \s\MYsex	{\neuter} % TODO: fix their pronouns
   \s\MYplayer	{Autumn G.}
   \s\MYinfluence{0}
-  \s\MYblues	{\bWorld{}\bSuperFamily{}\bChicagoIncident{}}
-  \s\MYgreens	{}
+  \s\MYblues	{\bWorld{}\bChicagoIncident{}}
+  \s\MYgreens	{\gStealing{}\gSellingThing{}}
   \s\MYabils	{\aInvisibility{}\aGradEndorse{}\aGradLaunchStartup{}}
   \s\MYsuperpower{Invisibility}
   \s\MYsupername{Undecided}
@@ -380,17 +389,11 @@
   \s\MYcash	{}
   \s\MYmems     {\mBecomeHero{}\mBecomeVillain{}}
   \s\MYcr{}
+  \superfalse
 }
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\NEW{NPC}{\cNPC}{
-  \s\MYname	{Test NPC}
-  \s\MYnumber	{00000}
-  \s\MYdesc	{a test}
-  \s\MYsex	{\male}
-}
 
 \NEW{NPC}{\cGS}{
   \s\MYname	{Paul Kaper}
@@ -399,13 +402,15 @@
   \s\MYnumber	{00000}
   \s\MYdesc	{Grandma's Spouse}
   \s\MYsex	{\male}
+  \badgefalse
 }
 
 \NEW{NPC}{\cChrisHemsworth}{
   \s\MYname	{Chris Hemsworth}
-  \s\MYnumber	{00000}
+  \s\MYnumber	{}
   \s\MYdesc	{A Hollywood hottie.}
   \s\MYsex	{\male}
+  \superfalse
 }
 
 \NEW{NPC}{\cJuggernaut}{
@@ -413,6 +418,7 @@
   \s\MYnumber	{00000}
   \s\MYdesc	{a test}
   \s\MYsex	{\male}
+  \badgefalse
 }
 
 \NEW{NPC}{\cAS}{
@@ -422,20 +428,24 @@
   \s\MYsex	{\female}
   \s\MYsupername{Banshee}
   \s\MYsuperpower{Sound waves}
+  \badgefalse
 }
 
 \NEW{NPC}{\cVillainCompact}{
   \s\MYname	{Villain Compact}
   \nickname{Compact}
   \s\MYsex	{\neuter}
+  \badgefalse
 }
 \NEW{NPC}{\cHeroLeague}{
   \s\MYname	{League of Heroes}
   \nickname{League}
   \s\MYsex	{\neuter}
+  \badgefalse
 }
 \NEW{NPC}{\cEther}{
   \s\MYname	{Ether}
   \s\MYsex	{\male}
+  \badgefalse
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

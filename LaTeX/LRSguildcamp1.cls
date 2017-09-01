@@ -40,6 +40,7 @@
 %% linebreaks in these and keep their lengths reasonable.
 \def\gamename{With Family Like This\ldots}
 \def\gamedate{Sep 17, 2017}
+\def\organization{Luminary Roleplay Society}
 
 
 %%%%%
@@ -95,7 +96,7 @@
   \mapnickinformal
   }
 
-
+\newif\ifsuper
 %%%%%
 %% \badgemap
 %%
@@ -108,7 +109,7 @@
 %% and for badges without descriptions:
 %%
 %%   \def\badgemap{{\MYname}{\MYnumber}{\MYplayer}{\unskip}}
-\def\badgemap{{\MYname}{\MYnumber}{\MYplayer}{\MYdesc}}
+\def\badgemap{{{\bf \MYname}\\\ifsuper{a.k.a. {\bf \MYsupername}}\else{}\fi}{\MYnumber}{\MYplayer}{\they/\them}}
 
 
 %%%%%
