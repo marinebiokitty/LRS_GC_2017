@@ -96,7 +96,7 @@
   \mapnickinformal
   }
 
-
+\newif\ifsuper
 %%%%%
 %% \badgemap
 %%
@@ -109,7 +109,7 @@
 %% and for badges without descriptions:
 %%
 %%   \def\badgemap{{\MYname}{\MYnumber}{\MYplayer}{\unskip}}
-\def\badgemap{{\MYname}{\MYnumber}{\MYplayer}{\MYdesc}}
+\def\badgemap{{{\bf \MYname}\\\ifsuper{a.k.a. {\bf \MYsupername}}\else{}\fi}{\MYnumber}{\MYplayer}{\they/\them}}
 
 
 %%%%%
