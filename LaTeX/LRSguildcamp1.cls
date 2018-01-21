@@ -29,7 +29,7 @@
 
 %%%%%
 %% \gamerun
-\def\gamerun{1}
+\def\gamerun{2}
 
 
 %%%%%
@@ -39,7 +39,7 @@
 %% Basic custom game information; gets used everywhere.  Don't put
 %% linebreaks in these and keep their lengths reasonable.
 \def\gamename{With Family Like This\ldots}
-\def\gamedate{Sep 17, 2017}
+\def\gamedate{Jan 27, 2018}
 \def\organization{Luminary Roleplay Society}
 
 
